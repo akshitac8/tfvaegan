@@ -86,21 +86,6 @@ class Discriminator_D1(nn.Module):
         h = self.fc2(self.hidden)
         return h
 
-#unconditional discriminator for transductive
-class Discriminator_D2(nn.Module):
-    def __init__(self, opt): 
-        super(Discriminator_D2, self).__init__()
-        self.fc1 = nn.Linear(opt.resSize, opt.ndh)
-        self.fc2 = nn.Linear(opt.ndh, 1)
-        self.lrelu = nn.LeakyReLU(0.2, True)
-
-        self.apply(weights_init)
-
-    def forward(self, x):
-        self.h1 = self.lrelu(self.fc1(x))
-        h = self.fc2(self.h1)
-        return h
-
 #Feedback Modules
 class Feedback(nn.Module):
     def __init__(self,opt):
