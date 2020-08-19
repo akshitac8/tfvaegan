@@ -64,7 +64,6 @@ conda activate pytorch0.3.1
 * [config.py](./zero-shot-images/config.py)  
 * [model.py](./zero-shot-images/model.py)  
 * [train_tfvaegan_inductive.py](./zero-shot-images/train_tfvaegan_inductive.py)  
-* [train_tfvaegan_transductive.py](./zero-shot-images/train_tfvaegan_transductive.py)  
 * [util.py](./zero-shot-images/util.py)
 
 
