@@ -27,10 +27,6 @@ parser.add_argument('--dec_lr', type=float, default=0.0001, help='learning rate 
 parser.add_argument('--classifier_lr', type=float, default=0.001, help='learning rate to train softmax classifier')
 parser.add_argument('--beta1', type=float, default=0.5, help='beta1 for adam. default=0.5')
 parser.add_argument('--cuda', action='store_true', default=True, help='enables cuda')
-parser.add_argument('--a1', type=float, default=1.0)
-parser.add_argument('--a2', type=float, default=1.0)
-parser.add_argument('--recons_weight', type=float, default=1.0, help='recons_weight for decoder')
-parser.add_argument('--feedback_loop', type=int, default=2)
 parser.add_argument('--encoded_noise', action='store_true', default=False, help='enables validation mode')
 parser.add_argument('--manualSeed', type=int, help='manual seed')
 parser.add_argument('--nclass_all', type=int, default=200, help='number of all classes')
@@ -43,6 +39,14 @@ parser.add_argument('--gammaG_D2', type=int, default=1000, help='weight on the W
 parser.add_argument('--gammaD2', type=int, default=1000, help='weight on the W-GAN loss')
 parser.add_argument("--latent_size", type=int, default=312)
 parser.add_argument("--conditional", action='store_true',default=True)
+###
+
+parser.add_argument('--a1', type=float, default=1.0)
+parser.add_argument('--a2', type=float, default=1.0)
+parser.add_argument('--recons_weight', type=float, default=1.0, help='recons_weight for decoder')
+parser.add_argument('--feedback_loop', type=int, default=2)
+parser.add_argument('--freeze_dec', action='store_true', default=False, help='Freeze Decoder for fake samples')
+
 
 opt = parser.parse_args()
 opt.lambda2 = opt.lambda1
