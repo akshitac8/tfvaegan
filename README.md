@@ -71,16 +71,18 @@ conda activate pytorch0.3.1
 
 ### Zero-Shot Image Classification
 ```
-CUB : python zero-shot-images/image-scripts/run_cub_tfvaegan.py
-AWA : python zero-shot-images/image_scripts/run_awa_tfvaegan.py
-FLO : python zero-shot-images/image_scripts/run_flo_tfvaegan.py
-SUN : python zero-shot-images/image_scripts/run_sun_tfvaegan.py
+cd zero-shot-images
+CUB : python image-scripts/run_cub_tfvaegan.py
+AWA : python image_scripts/run_awa_tfvaegan.py
+FLO : python image_scripts/run_flo_tfvaegan.py
+SUN : python image_scripts/run_sun_tfvaegan.py
 
 ```
 ### Zero-Shot Action Classification
 ```
-HMDB51 : python zero-shot-actions/action_scripts/run_hmdb51_tfvaegan.py
-UCF101 : python zero-shot-actions/action_scripts/run_ucf101_tfvaegan.py
+cd zero-shot-actions
+HMDB51 : python action_scripts/run_hmdb51_tfvaegan.py
+UCF101 : python action_scripts/run_ucf101_tfvaegan.py
 
 ```
 
