@@ -40,6 +40,19 @@ conda activate pytorch0.3.1
 
 ## Directory Structure
 
+### zero-shot-images
+* [data/](./zero-shot-images/data)  
+* [image-scripts/](./zero-shot-images/image-scripts)  
+  * [run_awa_tfvaegan.py](./zero-shot-images/image-scripts/run_awa_tfvaegan.py)  
+  * [run_cub_tfvaegan.py](./zero-shot-images/image-scripts/run_cub_tfvaegan.py)  
+  * [run_flo_tfvaegan.py](./zero-shot-images/image-scripts/run_flo_tfvaegan.py)  
+  * [run_sun_tfvaegan.py](./zero-shot-images/image-scripts/run_sun_tfvaegan.py)  
+* [classifier.py](./zero-shot-images/classifier.py)  
+* [config.py](./zero-shot-images/config.py)  
+* [model.py](./zero-shot-images/model.py)  
+* [train_tfvaegan_inductive.py](./zero-shot-images/train_tfvaegan_inductive.py)  
+* [util.py](./zero-shot-images/util.py)
+
 ### zero-shot-actions  
   
 * [action-scripts/](./zero-shot-actions/action-scripts)  
@@ -53,18 +66,6 @@ conda activate pytorch0.3.1
 * [train_tfvaegan.py](./zero-shot-actions/train_tfvaegan.py)  
 * [util.py](./zero-shot-actions/util.py)
 
-### zero-shot-images
-* [data/](./zero-shot-images/data)  
-* [image-scripts/](./zero-shot-images/image-scripts)  
-  * [run_awa_tfvaegan.py](./zero-shot-images/image-scripts/run_awa_tfvaegan.py)  
-  * [run_cub_tfvaegan.py](./zero-shot-images/image-scripts/run_cub_tfvaegan.py)  
-  * [run_flo_tfvaegan.py](./zero-shot-images/image-scripts/run_flo_tfvaegan.py)  
-  * [run_sun_tfvaegan.py](./zero-shot-images/image-scripts/run_sun_tfvaegan.py)  
-* [classifier.py](./zero-shot-images/classifier.py)  
-* [config.py](./zero-shot-images/config.py)  
-* [model.py](./zero-shot-images/model.py)  
-* [train_tfvaegan_inductive.py](./zero-shot-images/train_tfvaegan_inductive.py)  
-* [util.py](./zero-shot-images/util.py)
 
 
 ## Training
