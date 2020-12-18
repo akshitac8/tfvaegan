@@ -8,7 +8,7 @@ import numpy as np
 import util
 
 class CLASSIFIER:
-    def __init__(self, _train_X, _train_Y, data_loader, _nclass, syn_feature, syn_label, _cuda, seen_classifier, unseen_classifier, _lr=0.001, _beta1=0.5, _nepoch=50, _batch_size=100, _hidden_size=512, netDec=None, dec_size=4096, dec_hidden_size=4096, use_mult_rep=False):
+    def __init__(self, _train_X, _train_Y, data_loader, _nclass, syn_feature, syn_label, _cuda, seen_classifier, unseen_classifier, _lr=0.001, _beta1=0.5, _nepoch=50, _batch_size=100, _hidden_size=512, netDec=None, dec_size=4096, dec_hidden_size=4096):
         self.train_X =  _train_X 
         self.train_Y = _train_Y 
         self.test_seen_feature = data_loader.test_seen_feature
@@ -30,14 +30,12 @@ class CLASSIFIER:
         if self.netDec:
             self.netDec.eval()
             self.input_dim = self.input_dim + dec_size #4096
-            self.use_mult_rep = use_mult_rep
-            if self.use_mult_rep:
-                self.input_dim += dec_hidden_size
+            self.input_dim += dec_hidden_size
             self.model = ODDetector(self.input_dim, self.hidden_size, self.nclass)
-            self.train_X = self.compute_dec_out(self.train_X,self.input_dim, self.use_mult_rep)
-            self.syn_feat = self.compute_dec_out(self.syn_feat,self.input_dim, self.use_mult_rep)
-            self.test_unseen_feature = self.compute_dec_out(self.test_unseen_feature,self.input_dim, self.use_mult_rep)
-            self.test_seen_feature = self.compute_dec_out(self.test_seen_feature,self.input_dim, self.use_mult_rep)
+            self.train_X = self.compute_dec_out(self.train_X,self.input_dim)
+            self.syn_feat = self.compute_dec_out(self.syn_feat,self.input_dim)
+            self.test_unseen_feature = self.compute_dec_out(self.test_unseen_feature,self.input_dim)
+            self.test_seen_feature = self.compute_dec_out(self.test_seen_feature,self.input_dim)
 
         self.seen_cls_model = seen_classifier.best_model
         self.unseen_cls_model = unseen_classifier.best_model
@@ -182,7 +180,7 @@ class CLASSIFIER:
         return acc_per_class
 
 
-    def compute_dec_out(self, test_X, new_size, use_mult_rep=False):
+    def compute_dec_out(self, test_X, new_size):
         start = 0
         ntest = test_X.size()[0]
         new_test_X = torch.zeros(ntest,new_size)
@@ -193,12 +191,8 @@ class CLASSIFIER:
             else:
                 inputX = Variable(test_X[start:end], volatile=True)
             feat1 = self.netDec(inputX)
-            if use_mult_rep:
-                feat2 = self.netDec.getLayersOutDet()
-                new_test_X[start:end] = torch.cat([inputX,feat1,feat2],dim=1).data.cpu()
-            else:
-                new_test_X[start:end] = torch.cat([inputX,feat1],dim=1).data.cpu()
-            
+            feat2 = self.netDec.getLayersOutDet()
+            new_test_X[start:end] = torch.cat([inputX,feat1,feat2],dim=1).data.cpu()
             start = end
         return new_test_X
 
