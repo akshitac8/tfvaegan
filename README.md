@@ -1,3 +1,15 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/generalized-zero-shot-learning-on-awa2)](https://paperswithcode.com/sota/generalized-zero-shot-learning-on-awa2?p=latent-embedding-feedback-and-discriminative)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/zero-shot-learning-on-awa2)](https://paperswithcode.com/sota/zero-shot-learning-on-awa2?p=latent-embedding-feedback-and-discriminative)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/generalized-zero-shot-learning-on-cub-200)](https://paperswithcode.com/sota/generalized-zero-shot-learning-on-cub-200?p=latent-embedding-feedback-and-discriminative)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/zero-shot-learning-on-cub-200-2011)](https://paperswithcode.com/sota/zero-shot-learning-on-cub-200-2011?p=latent-embedding-feedback-and-discriminative)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/generalized-zero-shot-learning-on-oxford-102-1)](https://paperswithcode.com/sota/generalized-zero-shot-learning-on-oxford-102-1?p=latent-embedding-feedback-and-discriminative)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/zero-shot-learning-on-oxford-102-flower)](https://paperswithcode.com/sota/zero-shot-learning-on-oxford-102-flower?p=latent-embedding-feedback-and-discriminative)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/generalized-zero-shot-learning-on-sun)](https://paperswithcode.com/sota/generalized-zero-shot-learning-on-sun?p=latent-embedding-feedback-and-discriminative)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/latent-embedding-feedback-and-discriminative/zero-shot-learning-on-sun-attribute)](https://paperswithcode.com/sota/zero-shot-learning-on-sun-attribute?p=latent-embedding-feedback-and-discriminative)
+
+
+
+
 # Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification (ECCV 2020)
 
 #### [Sanath Narayan](https://scholar.google.com/citations?user=Bx7EFGoAAAAJ&hl=en)<sup>\*</sup>, [Akshita Gupta](https://scholar.google.com/citations?user=G01YeI0AAAAJ&hl=en)<sup>\*</sup>, [Fahad Shahbaz Khan](https://scholar.google.es/citations?user=zvaeYnUAAAAJ&hl=en), [Cees G. M. Snoek](https://scholar.google.com/citations?hl=en&user=0uKdbscAAAAJ&view_op), [Ling Shao](https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en) ####
