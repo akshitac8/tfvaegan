@@ -116,10 +116,10 @@ UCF101 : python action_scripts/run_ucf101_tfvaegan.py
 
 If you find this useful, please cite our work as follows:
 ```
-@article{narayan2020latent,
-  title={Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification},
-  author={Narayan, Sanath and Gupta, Akshita and Khan, Fahad Shahbaz and Snoek, Cees GM and Shao, Ling},
-  journal={arXiv preprint arXiv:2003.07833},
-  year={2020}
+@inproceedings{narayan2020latent,
+	title={Latent Embedding Feedback and Discriminative Features for Zero-Shot Classification},
+	author={Narayan, Sanath and Gupta, Akshita and Khan, Fahad Shahbaz and Snoek, Cees GM and Shao, Ling},
+	booktitle={ECCV},
+	year={2020}
 }
 ```
