@@ -15,10 +15,10 @@ import sys
 from sklearn import preprocessing
 import csv
 #import functions
-import model
-import util
-import classifier as classifier
-from config import opt
+import networks.TFVAEGAN_model as model
+import datasets.image_util as util
+import classifiers.classifier_images as classifier
+from config_images import opt
 
 if opt.manualSeed is None:
     opt.manualSeed = random.randint(1, 10000)

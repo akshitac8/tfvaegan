@@ -9,11 +9,11 @@ from torch.autograd import Variable
 import numpy as np
 import random
 # load files
-import model
-import util
-import classifier
-import classifier_entropy
-from config import opt
+import networks.TFVAEGAN_model as model
+import datasets.action_util as util
+import classifiers.classifier_actions as classifier
+import classifiers.classifier_entropy as classifier_entropy
+from config_actions import opt
 
 if opt.manualSeed is None:
     opt.manualSeed = random.randint(1, 10000)

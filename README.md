@@ -47,61 +47,48 @@ test samples can further belong to seen or unseen categories. The stateof-the-ar
   </tr>
 </table>
 
-## Installation
-The codebase is built on PyTorch 0.3.1 and tested on Ubuntu 16.04 environment (Python3.6, CUDA9.0, cuDNN7.5).
+## Prerequisites
++ Python 3.6
++ Pytorch 0.3.1
++ torchvision 0.2.0
++ h5py 2.10
++ scikit-learn 0.22.1
++ scipy=1.4.1
++ numpy 1.18.1
++ pip 20.0.2
 
-For installing, follow these intructions
+## Data preparation
+
+Download CUB, AWA, FLO and SUN features from the drive link shared below.
 ```
-conda env create -f environment.yml
-conda activate pytorch0.3.1
+link: https://drive.google.com/drive/folders/16Xk1eFSWjQTtuQivTogMmvL3P6F_084u?usp=sharing
+
 ```
+Download UCF101 and HMDB51 features from the drive link shared below.
+```
+link: https://drive.google.com/drive/folders/1pNlnL3LFSkXkJNkTHNYrQ3-Ie4vvewBy?usp=sharing
 
-## Directory Structure
-
-### zero-shot-images
-* [data/](./zero-shot-images/data)  
-* [image-scripts/](./zero-shot-images/image-scripts)  
-  * [run_awa_tfvaegan.py](./zero-shot-images/image-scripts/run_awa_tfvaegan.py)  
-  * [run_cub_tfvaegan.py](./zero-shot-images/image-scripts/run_cub_tfvaegan.py)  
-  * [run_flo_tfvaegan.py](./zero-shot-images/image-scripts/run_flo_tfvaegan.py)  
-  * [run_sun_tfvaegan.py](./zero-shot-images/image-scripts/run_sun_tfvaegan.py)  
-* [classifier.py](./zero-shot-images/classifier.py)  
-* [config.py](./zero-shot-images/config.py)  
-* [model.py](./zero-shot-images/model.py)  
-* [train_tfvaegan_inductive.py](./zero-shot-images/train_tfvaegan_inductive.py)  
-* [util.py](./zero-shot-images/util.py)
-
-### zero-shot-actions  
-  
-* [action-scripts/](./zero-shot-actions/action-scripts)  
-  * [run_hmdb51.py](./zero-shot-actions/action-scripts/run_hmdb51_tfvaegan.py)  
-  * [run_ucf101.py](./zero-shot-actions/action-scripts/run_ucf101_tfvaegan.py)  
-* [data/](./zero-shot-actions/data)  
-* [classifier.py](./zero-shot-actions/classifier.py)  
-* [classifier_entropy.py](./zero-shot-actions/classifier_entropy.py)  
-* [config.py](./zero-shot-actions/config.py)  
-* [model.py](./zero-shot-actions/model.py)  
-* [train_tfvaegan.py](./zero-shot-actions/train_tfvaegan.py)  
-* [util.py](./zero-shot-actions/util.py)
-
-
+```
+Extract them in the `datasets` folder.
 
 ## Training
 
 ### Zero-Shot Image Classification
+1. To train and evaluate ZSL and GZSL models on CUB, AWA, FLO and SUN, please run:
 ```
-cd zero-shot-images
-CUB : python image-scripts/run_cub_tfvaegan.py
-AWA : python image_scripts/run_awa_tfvaegan.py
-FLO : python image_scripts/run_flo_tfvaegan.py
-SUN : python image_scripts/run_sun_tfvaegan.py
+CUB : python scripts/run_cub_tfvaegan.py
+AWA : python scripts/run_awa_tfvaegan.py
+FLO : python scripts/run_flo_tfvaegan.py
+SUN : python scripts/run_sun_tfvaegan.py
 
 ```
 ### Zero-Shot Action Classification
+1. To train and evaluate ZSL and GZSL models on UCF101, HMDB51, please run:
+
 ```
 cd zero-shot-actions
-HMDB51 : python action_scripts/run_hmdb51_tfvaegan.py
-UCF101 : python action_scripts/run_ucf101_tfvaegan.py
+HMDB51 : python scripts/run_hmdb51_tfvaegan.py
+UCF101 : python scripts/run_ucf101_tfvaegan.py
 
 ```
 
@@ -125,10 +112,3 @@ If you find this useful, please cite our work as follows:
 	year={2020}
 }
 ```
-
-## Upcoming Updates
-1. Collab Training file
-2. Demo file for running inference on your own data
-3. pytorch version update from 0.3.1 -> 1.1.0
-
-Please do click on the watch icon to get notified for the new upcoming changes.
