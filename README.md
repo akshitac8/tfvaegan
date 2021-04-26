@@ -59,6 +59,8 @@ test samples can further belong to seen or unseen categories. The stateof-the-ar
 
 ## Data preparation
 
+### Standard ZSL and GZSL datasets
+
 Download CUB, AWA, FLO and SUN features from the drive link shared below.
 ```
 link: https://drive.google.com/drive/folders/16Xk1eFSWjQTtuQivTogMmvL3P6F_084u?usp=sharing
@@ -70,6 +72,17 @@ link: https://drive.google.com/drive/folders/1pNlnL3LFSkXkJNkTHNYrQ3-Ie4vvewBy?u
 
 ```
 Extract them in the `datasets` folder.
+
+### Custom datasets
+
+1. Download the custom dataset images in the datsets folder.
+2. Use a pre-defined RESNET101 as feature extractor. For example, you can a have look [here](https://github.com/akshitac8/Generative_MLZSL/tree/main/datasets/extract_features)
+3. Extract features from the pre-defined RESNET101 and save the features in the dictionary format with keys 'features', 'image_files', 'labels'.
+4. Save the dictionary in a .mat format using,  
+    ```
+    import scipy.io as io
+    io.savemat('temp',feat)
+    ```
 
 ## Training
 
