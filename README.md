@@ -99,7 +99,6 @@ SUN : python scripts/run_sun_tfvaegan.py
 1. To train and evaluate ZSL and GZSL models on UCF101, HMDB51, please run:
 
 ```
-cd zero-shot-actions
 HMDB51 : python scripts/run_hmdb51_tfvaegan.py
 UCF101 : python scripts/run_ucf101_tfvaegan.py
 
