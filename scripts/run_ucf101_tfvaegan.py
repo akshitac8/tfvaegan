@@ -7,8 +7,8 @@ Created on Sun Sep 29 17:52:45 2019
 """
 import os
 
-os.system('''CUDA_VISIBLE_DEVICES=5 OMP_NUM_THREADS=8 python train_tfvaegan.py --encoded_noise --gzsl_od --nclass_all 101 \
---dataroot data_action --manualSeed 806 \
+os.system('''CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python train_actions.py --encoded_noise --gzsl_od --nclass_all 101 \
+--dataroot datasets --manualSeed 806 \
 --syn_num 600 --preprocessing --cuda --gammaD 10 --gammaG 10 --image_embedding i3d \
 --class_embedding att \
 --nepoch 200 --ngh 4096 --ndh 4096 --lambda1 10 --critic_iter 5 --dataset ucf101_i3d/split_{split} \
