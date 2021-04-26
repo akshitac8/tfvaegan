@@ -30,7 +30,7 @@ test samples can further belong to seen or unseen categories. The stateof-the-ar
 ## **Overall Architecture:** 
 
 <p align="center">
-  <img src = "images/ovarch.png" width="700">
+  <img src = "readme_images/ovarch.png" width="700">
   <br/>
   <br/>
   <b> Overall Framework for TF-Vaegan </b>
@@ -38,8 +38,8 @@ test samples can further belong to seen or unseen categories. The stateof-the-ar
 
 <table>
   <tr>
-    <td> <img src = "images/feedback.png" width="600"> </td>
-    <td> <img src = "images/decoder.png" width="600"> </td>
+    <td> <img src = "readme_images/feedback.png" width="600"> </td>
+    <td> <img src = "readme_images/decoder.png" width="600"> </td>
   </tr>
   <tr >
     <td><p align="center"> <b> A feedback module, which utilizes the auxiliary decoder during both training and feature synthesis stages for improving semantic quality of synthesized feature.</b></p></td>
@@ -96,8 +96,8 @@ UCF101 : python scripts/run_ucf101_tfvaegan.py
 
 <table>
   <tr>
-    <td> <img src = "images/inductive_zsl.png" width="600"> </td>
-    <td> <img src = "images/inductive_gzsl.png" width="600"> </td>
+    <td> <img src = "readme_images/inductive_zsl.png" width="600"> </td>
+    <td> <img src = "readme_images/inductive_gzsl.png" width="600"> </td>
   </tr>
 </table>
 
