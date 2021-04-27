@@ -16,7 +16,7 @@
 
 (* denotes equal contribution)
 
-**Paper:** https://arxiv.org/abs/2003.07833
+**Paper:** https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670477.pdf
 
 **Video Presentation:** [Short summary](https://youtu.be/Jq0glS1DwGg) , [Overview](https://youtu.be/tNmyfKVUIpo)
 
