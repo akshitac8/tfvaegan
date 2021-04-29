@@ -59,7 +59,7 @@ test samples can further belong to seen or unseen categories. The stateof-the-ar
 + pillow 5.1.0
 
 ## Installation
-The model is built in PyTorch 0.3.1 and tested on Ubuntu 16.04 environment (Python3.7, CUDA9.0, cuDNN7.5).
+The model is built in PyTorch 0.3.1 and tested on Ubuntu 16.04 environment (Python3.6, CUDA9.0, cuDNN7.5).
 
 For installing, follow these intructions
 ```
