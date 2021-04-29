@@ -57,7 +57,17 @@ test samples can further belong to seen or unseen categories. The stateof-the-ar
 + numpy 1.18.1
 + numpy-base 1.18.1
 + pillow 5.1.0
-+ mkl v2020
+
+## Installation
+The model is built in PyTorch 0.3.1 and tested on Ubuntu 16.04 environment (Python3.7, CUDA9.0, cuDNN7.5).
+
+For installing, follow these intructions
+```
+conda create -n tfvaegan python=3.6
+conda activate tfvaegan
+pip install https://download.pytorch.org/whl/cu90/torch-0.3.1-cp36-cp36m-linux_x86_64.whl
+pip install torchvision==0.2.0 scikit-learn==0.22.1 scipy==1.4.1 h5py==2.10 numpy==1.18.1
+```
 
 ## Data preparation
 
