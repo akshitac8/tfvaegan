@@ -4,7 +4,7 @@ import torch.nn as nn
 from torch.autograd import Variable
 import torch.optim as optim
 import numpy as np
-import util
+import datasets.image_util as util
 from sklearn.preprocessing import MinMaxScaler 
 import sys
 import copy
