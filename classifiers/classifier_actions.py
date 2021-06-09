@@ -54,7 +54,6 @@ class CLASSIFIER:
     def fit_zsl(self):
         best_acc = 0
         mean_loss = 0
-        last_loss_epoch = 1e8 
         best_model = copy.deepcopy(self.model.state_dict())
         for epoch in range(self.nepoch):
             for i in range(0, self.ntrain, self.batch_size):      
@@ -82,8 +81,6 @@ class CLASSIFIER:
         best_H = 0
         best_seen = 0
         best_unseen = 0
-        out = []
-        best_model = copy.deepcopy(self.model.state_dict())
         # early_stopping = EarlyStopping(patience=20, verbose=True)
         for epoch in range(self.nepoch):
             for i in range(0, self.ntrain, self.batch_size):      
