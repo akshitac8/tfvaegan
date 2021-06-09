@@ -1,7 +1,6 @@
 #author: akshitac8
 from __future__ import print_function
 import torch
-import torch.nn as nn
 import torch.autograd as autograd
 import torch.optim as optim
 import torch.backends.cudnn as cudnn
@@ -86,8 +85,8 @@ def WeightedL1(pred, gt, bce=False, gt_bce=None):
            
 def feedback_module(gen_out, att, netG, netDec, netF):
     syn_fake = netG(gen_out, c=att)
-    recons = netDec(syn_fake)
-    recons_hidden_feat = netDec.getLayersOutDet()
+    #recons = netDec(syn_fake)
+    recons_hidden_feat = netDec(syn_fake).getLayersOutDet()
     feedback_out = netF(recons_hidden_feat)
     syn_fake = netG(gen_out, a1=opt.a1, c=att, feedback_layers=feedback_out)
     return syn_fake
