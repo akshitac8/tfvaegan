@@ -1,19 +1,12 @@
 #author: akshitac8
 #tf-vaegan inductive
 from __future__ import print_function
-import os
 import random
 import torch
-import torch.nn as nn
 import torch.autograd as autograd
 import torch.optim as optim
 import torch.backends.cudnn as cudnn
 from torch.autograd import Variable
-import numpy as np
-import math
-import sys
-from sklearn import preprocessing
-import csv
 #import functions
 import networks.TFVAEGAN_model as model
 import datasets.image_util as util
@@ -102,8 +95,8 @@ def generate_syn_feature(generator,classes, attribute,num,netF=None,netDec=None)
         syn_attv = Variable(syn_att,volatile=True)
         fake = generator(syn_noisev,c=syn_attv)
         if netF is not None:
-            dec_out = netDec(fake) # only to call the forward function of decoder
-            dec_hidden_feat = netDec.getLayersOutDet() #no detach layers
+            # dec_out = netDec(fake) # only to call the forward function of decoder
+            dec_hidden_feat = netDec(fake).getLayersOutDet() #no detach layers
             feedback_out = netF(dec_hidden_feat)
             fake = generator(syn_noisev, a1=opt.a2, c=syn_attv, feedback_layers=feedback_out)
         output = fake
