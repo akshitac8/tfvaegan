@@ -75,7 +75,7 @@ class DATA_LOADER(object):
                     temp_att = torch.from_numpy(scaler_att.fit_transform(orig_att)).float()
                 else:
                     temp_att = torch.from_numpy(scaler_att.fit_transform(self.attribute)).float()
-                mx_att = temp_att.max()
+                #mx_att = temp_att.max()
                 temp_att.mul_(1/mx)
                 self.bce_attribute = temp_att
                 self.bce_attribute_norm = self.bce_attribute/self.bce_attribute.pow(2).sum(1).sqrt().unsqueeze(1).expand(self.attribute.size(0),self.attribute.size(1))
