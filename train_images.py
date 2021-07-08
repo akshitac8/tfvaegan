@@ -95,8 +95,8 @@ def generate_syn_feature(generator,classes, attribute,num,netF=None,netDec=None)
         syn_attv = Variable(syn_att,volatile=True)
         fake = generator(syn_noisev,c=syn_attv)
         if netF is not None:
-            # dec_out = netDec(fake) # only to call the forward function of decoder
-            dec_hidden_feat = netDec(fake).getLayersOutDet() #no detach layers
+            dec_out = netDec(fake) # only to call the forward function of decoder
+            dec_hidden_feat = netDec.getLayersOutDet() #no detach layers
             feedback_out = netF(dec_hidden_feat)
             fake = generator(syn_noisev, a1=opt.a2, c=syn_attv, feedback_layers=feedback_out)
         output = fake
